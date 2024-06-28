@@ -1,0 +1,87 @@
+/* General styles */
+.title
+.titleFilm {
+    padding-top: 12%;
+}
+
+.sub-header {
+    height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(avantart.webp);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.sub-header h1 {
+    color: #888787;
+}
+
+.sub-header h2 {
+    font-size: 40px;
+    margin-top: 90px;
+}
+
+.aboutus, .aboutart {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-col, .aboutart-col {
+    flex: 48%;
+    padding: 30px 2px;
+}
+
+.about-col img, .aboutart-col img {
+    width: 100%;
+}
+
+.about-col p, .aboutart-col p {
+    padding: 15px 0 25px;
+}
+
+.youtubevid {
+    margin-top: 50px;
+}
+
+.footer {
+    background: #1D2C43;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1 1 30%;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+    .about-col, .aboutart-col {
+        flex: 100%;
+        padding: 30px 0;
+        text-align: center;
+    }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avant-Garde Sphere-- Contact Page</title>
+    <link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css", integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK", crossorigin="anonymous")>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style5.css">
+</head>
+
+<body>
+    <div class="third-header">
+        <div class="navbar">
+            <img src="logo.jpg"  alt="logo"   class="logo">
+            <ul>
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="gallery.html" target="_blank">Fashion</a></li>
+                <li><a href="art.html" target="_blank">Performance Art</a></li>
+                <li><a href="film.html" target="_blank">Film</a></li>
+                <li><a href="about.html" target="_blank">About</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+            </ul>
+        </div>
+        <section class="contact">
+            <div class="content">
+                <h2>Contact Us</h2>
+                <p>Reach out to us today. We're eager to hear from you!</p>
+            </div>
+            <div class="container">
+                <div class="contactInfo">
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3> Phone</h3>
+                            <p> +01 52722822</p>
+                        </div>
+                    </div> <!-- Closing the box div here -->
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>spratha24@tbc.edu.np</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>Neer road,<br>Jhamsikhel, Kathmandu,<br>12690</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contactform">
+                    <form>
+                        <h2>Send Message</h2>
+                        <div class="inputBox">
+                            <input type="text" name="" required="required">
+                            <span>Full Name</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="" required="required">
+                            <span>Email</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="" required="required">
+                            <span>Type your Message...</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" id="sendButton" name="" value="Send">
+                            <span></span>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </section>
+       
+    </div>
+
+    <script>
+        document.getElementById('sendButton').addEventListener('click', function(event) {
+            event.preventDefault(); 
+    
+            alert('Button clicked!');
+        });
+    </script>
+    
+
+    <footer>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Avant-Garde Sphere</h3>
+            <p>Exploring the boundaries of art, fashion, and film since 2010</p>
+          </div>
+          <div class="footer-section">
+            <h3>Connect</h3>
+            <nav>
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="gallery.html" target="_blank">Fashion</a></li>
+                <li><a href="art.html" target="_blank">Performance Art</a></li>
+                <li><a href="film.html" target="_blank">Film</a></li>
+                <li><a href="about.html" target="_blank">About</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+            </nav>
+          </div>
+          <div class="footer-section">
+            <h3>Stay Inspired</h3>
+            <p>Stay Avant-Garde</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Avant-Garde Sphere. All rights reserved.Created by Pratha Sharma<br> CS&DF</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com" aria-label="Instagram">IG</a>
+            <a href="https://www.facebook.com" aria-label="Twitter">TW</a>
+            <a href="https://www.pinterest.com" aria-label="Pinterest">PT</a>
+          </div>
+        </div>
+      </footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.banner {
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(1pic.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar {
+    width: 100%;
+    height: 15%;
+    padding: 35px 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.30);
+    z-index: 1000;
+}
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+/* Add padding to the top of the banner to account for the fixed navbar */
+.banner {
+    padding-top: 100px; /* Adjust this value based on your navbar height */
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: aliceblue;
+    z-index: 1;
+}
+
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #009688;
+    transition: right 0.3s ease-in;
+    z-index: -1;
+}
+
+button:hover::before {
+    right: 0;
+}
+
+
+
+/* Fashion Section Styles */
+.avant-garde {
+    background-color: black;
+    padding: 80px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.avant-garde h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.avant-garde .tagline {
+    font-size: 18px;
+    color: #bbb;
+    margin-bottom: 50px;
+}
+
+.avant-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 5%;
+}
+
+.avant-item {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.avant-item:hover {
+    transform: scale(1.05);
+}
+
+.avant-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.avant-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: left;
+}
+
+.avant-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.avant-item p {
+    font-size: 14px;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.fashion {
+    background: url('indexfashion.jpg') center/cover no-repeat;  
+}
+
+.art {
+    background: url('indexart.png') center/cover no-repeat;
+}
+
+.film {
+    background: url('indexfilm.jpg') center/cover no-repeat;
+}
+
+@media (max-width: 768px) {
+    .avant-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*image slider*/
+.container {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .imgContainer {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+  }
+  
+  .slide_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+  }
+  
+  .img {
+    position: relative;
+    height: 370px;
+    width: 240px;
+    filter: saturate(10%);
+    transition: 0.7s;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+  }
+  
+  .button {
+    position: absolute;
+    width: 240px;
+    height: 370px;
+    transition: 0.7s;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .img.active,
+.button.active {
+  width: 390px;
+  height: 600px;
+  background-color: transparent;
+  filter: saturate(100%);
+}
+  
+  .imgContainer.slide1 { left: 60%; }
+  .imgContainer.slide2 { left: 40%; }
+  .imgContainer.slide3 { left: 20%; }
+  .imgContainer.slide4 { left: 0%; }
+  .imgContainer.slide5 { left: -20%; }
+  .imgContainer.slide6 { left: -40%; }
+  .imgContainer.slide7 { left: -60%; }
+  
+/* About us css */
+.titleAbout {
+    padding-top: 10%;
+
+}
+
+.sub-header{
+    height:80vh;
+    width:100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(avant.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color:#fff;
+}
+
+.sub-header h1{
+    color: #888787;
+}
+
+.sub-header h2{
+    font-size: 40px;
+    margin-top: 90px;
+}
+
+
+.aboutus{
+    width:80%;
+    margin:auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.about-col{
+    flex:48%;
+    padding: 30px 2px;
+
+
+}
+
+.about-col img{
+    width:100%;
+}
+.about-col{
+    padding-top: 0;
+
+}
+
+.about-col p{
+    padding: 15px 0 25px;
+}
+
+.aboutart{
+    width:80%;
+    margin:auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.aboutart-col{
+    flex:48%;
+    padding: 30px 2px;
+}
+
+.aboutart-col h4{
+    color: red;
+}
+.aboutart-col p{
+    font-size: 20px;
+    color: black;
+    line-height: 40px ;
+}
+
+
+/*fashion*/
+
+
+.aboutfashion{
+    width:80%;
+    margin:auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.aboutfashion-col{
+    flex:48%;
+    padding: 30px 2px;
+}
+
+.aboutfashion-col h4{
+    color: red;
+}
+.aboutfashion-col p{
+    font-size: 20px;
+    color: black;
+    line-height: 40px ;
+}
+
+.img {
+    align-items: center;
+
+}
+
+/*film*/
+
+
+.aboutfilm{
+    width:80%;
+    margin:auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.aboutfilm-col{
+    flex:48%;
+    padding: 30px 2px;
+}
+
+.aboutfilm-col h4{
+    color: red;
+}
+.aboutfilm-col p{
+    font-size: 20px;
+    color: black;
+    line-height: 40px ;
+} 
+
+/* Contact page */
+.third-header {
+    height: 120vh; /* Set height to 100vh for full viewport height */
+    width: 100%;   /* Cover entire width of the viewport */
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(cb.jpg);
+    background-position: center;
+    background-size: cover; /* Cover the entire container with the background image */
+    text-align: center;
+    color: #fff;
+}
+
+
+/*Film page*/
+.film-header {
+    height:80vh;
+    width:100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(film.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color:#fff;
+
+}
